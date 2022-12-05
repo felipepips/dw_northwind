@@ -36,6 +36,7 @@ with
             , f.pais_fornecedor
             , f.codigo_postal_fornecedor
             , f.telefone_fornecedor
+            , p.descontinuado
         from produtos p
         left join categorias c on p.id_categoria = c.id_categoria
         left join fornecedores f on p.id_fornecedor = f.id_fornecedor
