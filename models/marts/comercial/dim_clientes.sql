@@ -8,7 +8,7 @@ with
         select
             row_number() over (order by id_cliente) as sk_cliente
             , id_cliente
-            , nome_empresa
+            , nome_cliente
             , nome_contato_cliente
             , titulo_contato_cliente
             , endereco_cliente

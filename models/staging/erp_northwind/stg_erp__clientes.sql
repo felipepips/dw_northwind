@@ -2,7 +2,7 @@ with
     source_customers as (
         select
             cast(customer_id as string) as id_cliente
-            , cast(company_name as string) as nome_empresa
+            , cast(company_name as string) as nome_cliente
             , cast(contact_name as string) as nome_contato_cliente
             , cast(contact_title as string) as titulo_contato_cliente
             , cast(address as string) as endereco_cliente
