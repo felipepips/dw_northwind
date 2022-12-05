@@ -1,0 +1,60 @@
+version: 2
+
+sources: 
+  - name: erp
+    description: cópia do DB do ERP Northwind
+    schema: erp_northwind
+    tables: 
+      - name: orders
+        description: tabela de pedidos - uma linha por pedido - inclui pedidos cancelados
+        columns:
+          - name: order_id
+            description: chave primária
+            tests:
+              - unique
+              - not_null
+
+      - name: products
+        description: tabela de produtos - uma linha por produto
+        columns:
+          - name: product_id
+            description: chave primária
+            tests:
+              - unique
+              - not_null      
+        
+      - name: shippers
+        description: tabela de transportadores - uma linha por transportador
+        columns:
+          - name: shipper_id
+            description: chave primária
+            tests:
+              - unique
+              - not_null        
+        
+      - name: categories
+        description: tabela de categorias de produtos - uma linha por categoria
+        columns:
+          - name: category_id
+            description: chave primária
+            tests:
+              - unique
+              - not_null          
+        
+      - name: suppliers
+        description: tabela de fornecedores - uma linha por fornecedor
+        columns:
+          - name: supplier_id
+            description: chave primária
+            tests:
+              - unique
+              - not_null         
+
+      - name: customers
+        description: tabela de clientes - uma linha por cliente
+        columns:
+          - name: customer_id
+            description: chave primária
+            tests:
+              - unique
+              - not_null     
