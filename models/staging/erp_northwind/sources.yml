@@ -58,3 +58,21 @@ sources:
             tests:
               - unique
               - not_null     
+ 
+
+      - name: order_details
+        description: tabela de detalhes de pedidos - uma linha por produto
+        columns:
+          - name: order_id
+            description: fk-pedidos
+            tests:
+              - not_null                                
+      
+      - name: employees
+        description: tabela de funcionarios - uma linha por pessoa
+        columns:
+          - name: employee_id
+            description: chave primária
+            tests:
+              - not_null               
+              - unique   
